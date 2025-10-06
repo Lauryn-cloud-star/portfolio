@@ -12,7 +12,7 @@ from jinja2 import Template
 PERSONAL_INFO = {
     'name': 'Lauryn Hope Tuhaise`',
     'title': 'Full Stack Developer & Climate in action fellowship member',
-    'description': 'I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.',
+    'description': 'I`m a passionate developer with a love for creating elegant solutions to complex problems. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.',
     'email': 'laurynhope29@gmail.com',
     'phone': '+256 (77) 368-0805',
     'location': 'Kampala, Uganda',
