@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website ready for deployment on Render",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "build": "echo 'Static site - no build step required'",
+    "dev": "npx serve -s . -l 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "responsive",
+    "modern",
+    "static"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
