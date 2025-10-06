@@ -30,7 +30,7 @@ PERSONAL_INFO = {
 
 # About section content
 ABOUT_CONTENT = {
-    'paragraph1': "I'm a passionate developer with a love for creating elegant solutions to complex problems. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.",
+    'paragraph1': "I'm a passionate developer with a love for creating elegant solutions to complex problems. I'm also a Climate in action fellowship member. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.",
     'paragraph2': "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends."
 }
 
