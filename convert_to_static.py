@@ -10,95 +10,101 @@ from jinja2 import Template
 
 # Your portfolio data (same as in app.py)
 PERSONAL_INFO = {
-    'name': 'Your Name',
-    'title': 'Full Stack Developer & Creative Problem Solver',
+    'name': 'Lauryn Hope Tuhaise`',
+    'title': 'Full Stack Developer & Climate in action fellowship member',
     'description': 'I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.',
-    'email': 'your.email@example.com',
-    'phone': '+1 (234) 567-890',
-    'location': 'San Francisco, CA',
-    'github': 'https://github.com/yourusername',
-    'linkedin': 'https://linkedin.com/in/yourusername',
-    'twitter': 'https://twitter.com/yourusername'
+    'email': 'laurynhope29@gmail.com',
+    'phone': '+256 (77) 368-0805',
+    'location': 'Kampala, Uganda',
+    'github': 'https://github.com/Lauryn-cloud-star',
+    'linkedin': 'https://www.linkedin.com/in/lauryn-hope-tuhaise-6a7236289',
+    'twitter': 'https://twitter.com/laurynhope'
 }
 
 ABOUT_CONTENT = {
-    'paragraph1': "I'm a passionate developer with a love for creating elegant solutions to complex problems. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.",
+    'paragraph1': "I'm a passionate developer with a love for creating elegant solutions to complex problems. I'm also a Climate in action fellowship member. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.",
     'paragraph2': "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends."
 }
 
 PROJECTS = [
     {
-        'title': 'E-Commerce Platform',
-        'description': 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.',
-        'technologies': ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+        'title': 'Karibu Groceries',
+        'description': 'Inventory management and sales system for a grocery store dealing in rice, beans, maize, and cowpeas. Streamlined operations and improved sales tracking.',
+        'technologies': ['Python', 'Tailwind CSS', 'Django', 'SQLite', 'HTML/CSS', 'React'],
         'live_url': '#',
-        'code_url': '#',
-        'icon': 'shopping-cart'
+        'code_url': 'https://github.com/Lauryn-cloud-star/final_project',
+        'icon': 'shopping-cart',
+        'image': 'image.png'
     },
     {
-        'title': 'Task Management App',
-        'description': 'Collaborative task management tool with real-time updates, team collaboration features, and advanced filtering.',
-        'technologies': ['TypeScript', 'React', 'Firebase', 'Tailwind'],
+        'title': 'ICPAU Audit Tool',
+        'description': 'Comprehensive audit management system for auditors and ICPAU regulators in Uganda. Streamlined compliance processes and regulatory reporting.',
+        'technologies': ['Python', 'Django-rest-framework', 'PostgreSQL', 'Typescript', 'React'],
         'live_url': '#',
         'code_url': '#',
-        'icon': 'tasks'
+        'icon': 'chart-bar',
+        'image': 'icpau.png'
     },
     {
-        'title': 'Analytics Dashboard',
-        'description': 'Data visualization dashboard with interactive charts, custom reports, and export functionality.',
-        'technologies': ['React', 'D3.js', 'Express', 'MongoDB'],
+        'title': 'FOSA Sacco System',
+        'description': 'Complete management system for FOSA Sacco. Handles member registration, loan management, savings tracking, and financial reporting.',
+        'technologies': ['JavaScript', 'Tailwind CSS', 'MySQL', 'Bootstrap', 'HTML', 'React'],
         'live_url': '#',
-        'code_url': '#',
-        'icon': 'chart-bar'
+        'code_url': 'https://github.com/Lauryn-cloud-star/grow-sacco-hub',
+        'icon': 'university',
+        'image': 'fosa.png'
     }
 ]
 
 SKILLS = {
     'Frontend Development': {
-        'icon': 'code',
-        'skills': ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3']
+        'icon': 'js-square',
+        'skills': ['JavaScript (ES6+)', 'HTML5/CSS3', 'Tailwind CSS', 'React', 'Bootstrap', 'Responsive Design']
     },
     'Backend Development': {
-        'icon': 'server',
-        'skills': ['Node.js', 'Express', 'Python', 'REST APIs', 'GraphQL']
+        'icon': 'python',
+        'skills': ['Python', 'Django Framework', 'Django REST Framework', 'Flask', 'API Development', 'MySQL', 'PostgreSQL']
     },
-    'Database & Storage': {
+    'Database Management': {
         'icon': 'database',
-        'skills': ['PostgreSQL', 'MongoDB', 'Redis', 'Firebase', 'Supabase']
+        'skills': ['PostgreSQL', 'MySQL', 'SQL Queries', 'Database Design', 'Django ORM', 'Data Migration']
     },
-    'Tools & Practices': {
+    'Development Tools': {
         'icon': 'tools',
-        'skills': ['Git', 'Docker', 'CI/CD', 'Testing', 'Agile']
+        'skills': ['Git Version Control', 'VS Code', 'Command Line', 'Debugging', 'Testing', 'Docker', 'Virtual Machines']
     },
-    'Mobile Development': {
-        'icon': 'mobile-alt',
-        'skills': ['React Native', 'Flutter', 'PWA', 'Responsive Design']
+    'System Development': {
+        'icon': 'cogs',
+        'skills': ['Inventory Management', 'Audit Systems', 'Financial Systems', 'User Management', 'Reporting Systems']
     },
-    'Other Skills': {
+    'Additional Skills': {
         'icon': 'bolt',
-        'skills': ['UI/UX Design', 'Cloud Computing', 'DevOps', 'Project Management']
+        'skills': ['Problem Solving', 'System Analysis', 'Requirements Gathering', 'Client Communication', 'Project Management']
     }
 }
 
 def create_static_site():
     """Create static HTML files from Flask template"""
     
-    # Read the Flask template
-    with open('templates/index.html', 'r', encoding='utf-8') as f:
+    # Read the static site template (already processed)
+    with open('static_site/index.html', 'r', encoding='utf-8') as f:
         template_content = f.read()
     
-    # Create Jinja2 template
-    template = Template(template_content)
+    # Replace template variables with actual data
+    replacements = {
+        'Your Name': PERSONAL_INFO['name'],
+        'your.email@example.com': PERSONAL_INFO['email'],
+        '+1 (234) 567-890': PERSONAL_INFO['phone'],
+        'San Francisco, CA': PERSONAL_INFO['location'],
+        'https://github.com/yourusername': PERSONAL_INFO['github'],
+        'https://linkedin.com/in/yourusername': PERSONAL_INFO['linkedin'],
+        'https://twitter.com/yourusername': PERSONAL_INFO['twitter'],
+        'Lauryn - Portfolio Photo': f"{PERSONAL_INFO['name']} - Portfolio Photo"
+    }
     
-    # Render with data (remove Flask-specific functions)
-    html_content = template.render(
-        personal_info=PERSONAL_INFO,
-        about_content=ABOUT_CONTENT,
-        projects=PROJECTS,
-        skills=SKILLS,
-        get_flashed_messages=lambda: [],
-        url_for=lambda x: x
-    )
+    html_content = template_content
+    for placeholder, value in replacements.items():
+        html_content = html_content.replace(placeholder, value)
     
     # Create static directory
     os.makedirs('static_site', exist_ok=True)
@@ -113,36 +119,36 @@ def create_static_site():
         shutil.copytree('static', 'static_site/static', dirs_exist_ok=True)
     
     # Create a simple contact form handler (client-side)
-    contact_js = """
+    contact_js = f"""
     // Simple contact form handler for static site
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {{
         const form = document.querySelector('form[method="POST"]');
-        if (form) {
-            form.addEventListener('submit', function(e) {
+        if (form) {{
+            form.addEventListener('submit', function(e) {{
                 e.preventDefault();
                 
                 const name = this.querySelector('input[name="name"]').value;
                 const email = this.querySelector('input[name="email"]').value;
                 const message = this.querySelector('textarea[name="message"]').value;
                 
-                if (!name || !email || !message) {
+                if (!name || !email || !message) {{
                     alert('Please fill in all fields.');
                     return;
-                }
+                }}
                 
                 // Create mailto link
-                const subject = `Portfolio Contact from ${name}`;
-                const body = `Name: ${name}\\nEmail: ${email}\\n\\nMessage:\\n${message}`;
-                const mailtoLink = `mailto:your.email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const subject = `Portfolio Contact from ${{name}}`;
+                const body = `Name: ${{name}}\\nEmail: ${{email}}\\n\\nMessage:\\n${{message}}`;
+                const mailtoLink = `mailto:{PERSONAL_INFO['email']}?subject=${{encodeURIComponent(subject)}}&body=${{encodeURIComponent(body)}}`;
                 
                 // Open email client
                 window.location.href = mailtoLink;
                 
                 // Show success message
                 alert('Thank you! Your email client should open with a pre-filled message.');
-            });
-        }
-    });
+            }});
+        }}
+    }});
     """
     
     # Add contact form handler to main.js

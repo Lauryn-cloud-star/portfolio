@@ -17,15 +17,15 @@ app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 
 # Personal information - customize these
 PERSONAL_INFO = {
-    'name': 'Your Name',
+    'name': 'Lauryn',
     'title': 'Full Stack Developer & Creative Problem Solver',
     'description': 'I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.',
-    'email': 'your.email@example.com',
-    'phone': '+1 (234) 567-890',
-    'location': 'San Francisco, CA',
-    'github': 'https://github.com/yourusername',
-    'linkedin': 'https://linkedin.com/in/yourusername',
-    'twitter': 'https://twitter.com/yourusername'
+    'email': 'lauryn@example.com',
+    'phone': '+256 (xxx) xxx-xxx',
+    'location': 'Uganda',
+    'github': 'https://github.com/Lauryn-cloud-star',
+    'linkedin': 'https://linkedin.com/in/lauryn',
+    'twitter': 'https://twitter.com/lauryn'
 }
 
 # About section content
@@ -37,56 +37,56 @@ ABOUT_CONTENT = {
 # Projects data
 PROJECTS = [
     {
-        'title': 'E-Commerce Platform',
-        'description': 'A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.',
-        'technologies': ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+        'title': 'Karibu Groceries',
+        'description': 'Inventory management and sales system for a grocery store dealing in rice, beans, maize, and cowpeas. Streamlined operations and improved sales tracking.',
+        'technologies': ['Python', 'Tailwind CSS', 'Django', 'SQLite', 'HTML/CSS'],
         'live_url': '#',
-        'code_url': '#',
+        'code_url': 'https://github.com/Lauryn-cloud-star/final_project',
         'icon': 'shopping-cart'
     },
     {
-        'title': 'Task Management App',
-        'description': 'Collaborative task management tool with real-time updates, team collaboration features, and advanced filtering.',
-        'technologies': ['TypeScript', 'React', 'Firebase', 'Tailwind'],
-        'live_url': '#',
-        'code_url': '#',
-        'icon': 'tasks'
-    },
-    {
-        'title': 'Analytics Dashboard',
-        'description': 'Data visualization dashboard with interactive charts, custom reports, and export functionality.',
-        'technologies': ['React', 'D3.js', 'Express', 'MongoDB'],
+        'title': 'ICPAU Audit Tool',
+        'description': 'Comprehensive audit management system for auditors and ICPAU regulators in Uganda. Streamlined compliance processes and regulatory reporting.',
+        'technologies': ['Python', 'Django REST Framework', 'PostgreSQL', 'TypeScript', 'React'],
         'live_url': '#',
         'code_url': '#',
         'icon': 'chart-bar'
+    },
+    {
+        'title': 'FOSA Sacco System',
+        'description': 'Complete management system for FOSA Sacco. Handles member registration, loan management, savings tracking, and financial reporting.',
+        'technologies': ['JavaScript', 'Tailwind CSS', 'MySQL', 'Bootstrap', 'HTML'],
+        'live_url': '#',
+        'code_url': 'https://github.com/Lauryn-cloud-star/grow-sacco-hub',
+        'icon': 'university'
     }
 ]
 
 # Skills data
 SKILLS = {
     'Frontend Development': {
-        'icon': 'code',
-        'skills': ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3']
+        'icon': 'js-square',
+        'skills': ['JavaScript (ES6+)', 'HTML5/CSS3', 'Tailwind CSS', 'React', 'Bootstrap', 'Responsive Design']
     },
     'Backend Development': {
-        'icon': 'server',
-        'skills': ['Node.js', 'Express', 'Python', 'REST APIs', 'GraphQL']
+        'icon': 'python',
+        'skills': ['Python', 'Django Framework', 'Django REST Framework', 'Flask', 'API Development', 'MySQL', 'PostgreSQL']
     },
-    'Database & Storage': {
+    'Database Management': {
         'icon': 'database',
-        'skills': ['PostgreSQL', 'MongoDB', 'Redis', 'Firebase', 'Supabase']
+        'skills': ['PostgreSQL', 'MySQL', 'SQL Queries', 'Database Design', 'Django ORM', 'Data Migration']
     },
-    'Tools & Practices': {
+    'Development Tools': {
         'icon': 'tools',
-        'skills': ['Git', 'Docker', 'CI/CD', 'Testing', 'Agile']
+        'skills': ['Git Version Control', 'VS Code', 'Command Line', 'Debugging', 'Testing', 'Docker', 'Virtual Machines']
     },
-    'Mobile Development': {
-        'icon': 'mobile-alt',
-        'skills': ['React Native', 'Flutter', 'PWA', 'Responsive Design']
+    'System Development': {
+        'icon': 'cogs',
+        'skills': ['Inventory Management', 'Audit Systems', 'Financial Systems', 'User Management', 'Reporting Systems']
     },
-    'Other Skills': {
+    'Additional Skills': {
         'icon': 'bolt',
-        'skills': ['UI/UX Design', 'Cloud Computing', 'DevOps', 'Project Management']
+        'skills': ['Problem Solving', 'System Analysis', 'Requirements Gathering', 'Client Communication', 'Project Management']
     }
 }
 
