@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .scroll-smooth { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-inter scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-lg z-50 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                Your Name
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">About</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="text-gray-600 hover:text-gray-900 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300">Contact</a>
+            </nav>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-900" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="max-w-6xl mx-auto px-5 py-4 space-y-4">
+                <a href="#about" class="block text-gray-600 hover:text-gray-900 transition-colors duration-300">About</a>
+                <a href="#projects" class="block text-gray-600 hover:text-gray-900 transition-colors duration-300">Projects</a>
+                <a href="#skills" class="block text-gray-600 hover:text-gray-900 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="block bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-center">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Full Stack Developer & Creative Problem Solver
+                </h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed">
+                    I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#projects" class="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1">
+                        View My Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-white text-gray-900 border-2 border-gray-900 px-8 py-4 rounded-lg hover:bg-gray-900 hover:text-white transition-all duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://github.com/yourusername" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center hover:bg-gray-900 hover:text-white transition-all duration-300 hover:-translate-y-1">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">About Me</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        I'm a passionate developer with a love for creating elegant solutions to complex problems. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-80 h-80 bg-gray-100 rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-user text-6xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Here are some of my recent works. Each project represents a unique challenge and an opportunity to learn and grow.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">A full-stack e-commerce solution with payment integration, inventory management, and real-time analytics.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Stripe</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-tasks text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Task Management App</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Collaborative task management tool with real-time updates, team collaboration features, and advanced filtering.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">TypeScript</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Firebase</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Tailwind</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-chart-bar text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Data visualization dashboard with interactive charts, custom reports, and export functionality.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">React</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">D3.js</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live
+                            </a>
+                            <a href="#" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="{{ project.live_url }}" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live
+                            </a>
+                            <a href="{{ project.code_url }}" class="flex items-center gap-2 text-gray-900 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-900 hover:text-white transition-colors duration-300">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    A comprehensive toolkit built through years of experience and continuous learning.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Frontend Development</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            React
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            TypeScript
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Next.js
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Tailwind CSS
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            HTML5/CSS3
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Backend Development</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Node.js
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Express
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Python
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            REST APIs
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            GraphQL
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Database & Storage</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            PostgreSQL
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            MongoDB
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Redis
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Firebase
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Supabase
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Tools & Practices</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Git
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Docker
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            CI/CD
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Testing
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Agile
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Mobile Development</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            React Native
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Flutter
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            PWA
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Responsive Design
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Other Skills</h3>
+                    <ul class="text-left space-y-2">
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            UI/UX Design
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Cloud Computing
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            DevOps
+                        </li>
+                        <li class="text-gray-600 flex items-center">
+                            <span class="w-2 h-2 bg-gray-900 rounded-full mr-3"></span>
+                            Project Management
+                        </li>
+                    </ul>
+                </div>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have a project in mind or want to collaborate? Feel free to reach out. I'm always open to discussing new opportunities.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- Contact Information -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Contact Information</h3>
+                    <p class="text-gray-600 mb-8">You can reach me through any of these channels</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Email</h4>
+                                <p class="text-gray-600">your.email@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Phone</h4>
+                                <p class="text-gray-600">+1 (234) 567-890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-gray-100 text-gray-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Location</h4>
+                                <p class="text-gray-600">San Francisco, CA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Send a Message</h3>
+                    <p class="text-gray-600 mb-8">Fill out the form and I'll get back to you as soon as possible</p>
+                    
+
+
+                    <form method="POST" action="#contact">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-900 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-300"
+                                       placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-900 mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-300"
+                                       placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-900 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors duration-300 resize-none"
+                                          placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors duration-300 font-medium">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 Your Name. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/yourusername" target="_blank" class="w-10 h-10 bg-gray-800 text-gray-400 rounded-full flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="w-10 h-10 bg-gray-800 text-gray-400 rounded-full flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/yourusername" target="_blank" class="w-10 h-10 bg-gray-800 text-gray-400 rounded-full flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="w-10 h-10 bg-gray-800 text-gray-400 rounded-full flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-gray-800 z-40">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="static/js/main.js"></script>
+
+    <script>
+    function handleContactForm(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        if (!name || !email || !message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+        
+        // Create mailto link
+        const subject = `Portfolio Contact from ${name}`;
+        const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+        const mailtoLink = `mailto:your.email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show success message
+        alert('Thank you! Your email client should open with a pre-filled message.');
+    }
+    </script></body>
+</html>
