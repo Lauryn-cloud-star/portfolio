@@ -20,11 +20,11 @@ PERSONAL_INFO = {
     'name': 'Lauryn',
     'title': 'Full Stack Developer & Creative Problem Solver',
     'description': 'I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.',
-    'email': 'lauryn@example.com',
-    'phone': '+256 (xxx) xxx-xxx',
+    'email': 'laurynhope29@gmail.com',
+    'phone': '+256 (77) 368-0805',
     'location': 'Uganda',
     'github': 'https://github.com/Lauryn-cloud-star',
-    'linkedin': 'https://linkedin.com/in/lauryn',
+    'linkedin': 'https://www.linkedin.com/in/lauryn-hope-tuhaise-6a7236289/',
     'twitter': 'https://twitter.com/lauryn'
 }
 
@@ -42,7 +42,8 @@ PROJECTS = [
         'technologies': ['Python', 'Tailwind CSS', 'Django', 'SQLite', 'HTML/CSS'],
         'live_url': '#',
         'code_url': 'https://github.com/Lauryn-cloud-star/final_project',
-        'icon': 'shopping-cart'
+        'icon': 'shopping-cart',
+        'image': 'image.png'
     },
     {
         'title': 'ICPAU Audit Tool',
@@ -50,7 +51,8 @@ PROJECTS = [
         'technologies': ['Python', 'Django REST Framework', 'PostgreSQL', 'TypeScript', 'React'],
         'live_url': '#',
         'code_url': '#',
-        'icon': 'chart-bar'
+        'icon': 'chart-bar',
+        'image': 'icpau.png'
     },
     {
         'title': 'FOSA Sacco System',
@@ -58,7 +60,8 @@ PROJECTS = [
         'technologies': ['JavaScript', 'Tailwind CSS', 'MySQL', 'Bootstrap', 'HTML'],
         'live_url': '#',
         'code_url': 'https://github.com/Lauryn-cloud-star/grow-sacco-hub',
-        'icon': 'university'
+        'icon': 'university',
+        'image': 'fosa.png'
     }
 ]
 
