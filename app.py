@@ -43,7 +43,7 @@ PROJECTS = [
         'live_url': '#',
         'code_url': 'https://github.com/Lauryn-cloud-star/final_project',
         'icon': 'shopping-cart',
-        'icon_image': 'icon-shop.png'
+        'image': 'image.png'
     },
     {
         'title': 'ICPAU Audit Tool',
@@ -52,7 +52,7 @@ PROJECTS = [
         'live_url': '#',
         'code_url': '#',
         'icon': 'chart-bar',
-        'icon_image': 'icpau.png'
+        'image': 'icpau.png'
     },
     {
         'title': 'FOSA Sacco System',
@@ -61,7 +61,7 @@ PROJECTS = [
         'live_url': '#',
         'code_url': 'https://github.com/Lauryn-cloud-star/grow-sacco-hub',
         'icon': 'university',
-        'icon_image': 'icon-bank.png'
+        'image': 'fosa.png'
     }
 ]
 
