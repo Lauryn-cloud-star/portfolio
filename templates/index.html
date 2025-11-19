@@ -36,23 +36,30 @@
         body { font-family: 'Inter', sans-serif; }
         .scroll-smooth { scroll-behavior: smooth; }
         
-        /* Project image container styles */
+        /* Project card styles */
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
         .project-image-container {
-            height: 200px;
-            width: 100%;
+            margin-bottom: 24px;
+            border-radius: 8px;
             overflow: hidden;
-            background-color: white;
+            background-color: #f8f9fa;
         }
         
         .project-image-container img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
             transition: transform 0.3s ease-in-out;
-        }
-        
-        .project-image-container:hover img {
-            transform: scale(1.05);
         }
 
         .oval-image {
@@ -192,13 +199,13 @@
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for project in projects %}
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div class="project-card shadow-sm hover:shadow-lg">
                     <div class="project-image-container">
                         <img src="{{ url_for('static', filename='images/' + project.image) }}" 
                              alt="{{ project.title }}" 
-                             class="w-full h-full object-cover">
+                             class="w-full">
                     </div>
-                    <div class="p-6">
+                    <div class="space-y-4">
                         <h3 class="text-xl font-semibold text-brown-900 mb-3">{{ project.title }}</h3>
                         <p class="text-brown-600 mb-4 leading-relaxed">{{ project.description }}</p>
                         <div class="flex flex-wrap gap-2 mb-6">
