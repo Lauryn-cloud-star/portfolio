@@ -17,7 +17,7 @@ app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 
 # Personal information - customize these
 PERSONAL_INFO = {
-    'name': 'Lauryn',
+    'name': 'Lauryn Hope Tuhaise',
     'title': 'Full Stack Developer, Climate in Action Fellow & Tech Advocate',
     'description': 'I craft beautiful, functional web experiences with a passion for clean code, user experience, and sustainability. As a Climate in Action Fellowship member with Terra.do, I’m committed to building products that make a difference—technologically and environmentally.',
     'email': 'laurynhope29@gmail.com',
