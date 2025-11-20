@@ -18,8 +18,8 @@ app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 # Personal information - customize these
 PERSONAL_INFO = {
     'name': 'Lauryn',
-    'title': 'Full Stack Developer & Creative Problem Solver',
-    'description': 'I craft beautiful, functional web experiences. Passionate about clean code, user experience, and building products that make a difference.',
+    'title': 'Full Stack Developer, Climate in Action Fellow & Tech Advocate',
+    'description': 'I craft beautiful, functional web experiences with a passion for clean code, user experience, and sustainability. As a Climate in Action Fellowship member with Terra.do, I’m committed to building products that make a difference—technologically and environmentally.',
     'email': 'laurynhope29@gmail.com',
     'phone': '+256 (77) 368-0805',
     'location': 'Uganda',
@@ -30,8 +30,8 @@ PERSONAL_INFO = {
 
 # About section content
 ABOUT_CONTENT = {
-    'paragraph1': "I'm a passionate developer with a love for creating elegant solutions to complex problems. I'm also a Climate in action fellowship member. With years of experience in web development, I specialize in building responsive, user-friendly applications that deliver exceptional experiences.",
-    'paragraph2': "When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends."
+    'paragraph1': "Believing in technology’s power to transform lives and create opportunities, I thrive as a full stack developer with a strong focus on backend systems. As a Climate in Action Fellow with Terra.do, I architect scalable, efficient, and transparent platforms—building solutions that drive meaningful impact. My passion lies in using backend expertise to enhance system reliability while leveraging my full-stack versatility for maximum creative problem-solving.",
+    'paragraph2': "Beyond development, I’m dedicated to uplifting other women in tech, mentoring peers, and sharing knowledge across both developer and climate action communities. I center on continuous learning and innovation, always seeking new perspectives and skills to deliver tools and ideas with lasting influence."
 }
 
 # Projects data
