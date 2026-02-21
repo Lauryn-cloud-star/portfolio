@@ -85,10 +85,24 @@ SKILLS = {
 
 def create_static_site():
     """Create static HTML files from Flask template"""
+    import shutil
     
-    # Read the static site template (already processed)
-    with open('static_site/index.html', 'r', encoding='utf-8') as f:
-        template_content = f.read()
+    # Create static directory
+    os.makedirs('static_site', exist_ok=True)
+    os.makedirs('static_site/static/js', exist_ok=True)
+    
+    # Read the template if it exists, otherwise create a basic one
+    template_path = 'templates/index.html'
+    if os.path.exists(template_path):
+        with open(template_path, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+    else:
+        # Fallback: create a basic template
+        template_content = """<!DOCTYPE html>
+<html>
+<head><title>Portfolio</title></head>
+<body><h1>Your Name</h1></body>
+</html>"""
     
     # Replace template variables with actual data
     replacements = {
@@ -106,19 +120,15 @@ def create_static_site():
     for placeholder, value in replacements.items():
         html_content = html_content.replace(placeholder, value)
     
-    # Create static directory
-    os.makedirs('static_site', exist_ok=True)
-    
     # Write static HTML
     with open('static_site/index.html', 'w', encoding='utf-8') as f:
         f.write(html_content)
     
-    # Copy static files
-    import shutil
+    # Copy static files if they exist
     if os.path.exists('static'):
         shutil.copytree('static', 'static_site/static', dirs_exist_ok=True)
     
-    # Create a simple contact form handler (client-side)
+    # Create contact form handler (client-side)
     contact_js = f"""
     // Simple contact form handler for static site
     document.addEventListener('DOMContentLoaded', function() {{
@@ -151,12 +161,15 @@ def create_static_site():
     }});
     """
     
-    # Add contact form handler to main.js
-    with open('static/js/main.js', 'r', encoding='utf-8') as f:
-        main_js = f.read()
+    # Write contact form handler
+    main_js_path = 'static_site/static/js/main.js'
+    existing_js = ""
+    if os.path.exists('static/js/main.js'):
+        with open('static/js/main.js', 'r', encoding='utf-8') as f:
+            existing_js = f.read()
     
-    with open('static_site/static/js/main.js', 'w', encoding='utf-8') as f:
-        f.write(main_js + contact_js)
+    with open(main_js_path, 'w', encoding='utf-8') as f:
+        f.write(existing_js + contact_js)
     
     print("✅ Static site created in 'static_site' folder!")
     print("📁 Upload the contents of 'static_site' to any free hosting:")

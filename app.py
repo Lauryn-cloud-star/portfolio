@@ -69,27 +69,69 @@ PROJECTS = [
 SKILLS = {
     'Frontend Development': {
         'icon': 'js-square',
-        'skills': ['JavaScript (ES6+)', 'HTML5/CSS3', 'Tailwind CSS', 'React', 'Bootstrap', 'Responsive Design']
+        'skills': [
+            {'name': 'JavaScript (ES6+)', 'icon': 'fab fa-js'},
+            {'name': 'HTML5 / CSS3', 'icon': 'fab fa-html5'},
+            {'name': 'Tailwind CSS', 'icon': 'fas fa-wind'},
+            {'name': 'React', 'icon': 'fab fa-react'},
+            {'name': 'Bootstrap', 'icon': 'fab fa-bootstrap'},
+            {'name': 'Responsive Design', 'icon': 'fas fa-mobile-alt'},
+        ]
     },
     'Backend Development': {
         'icon': 'python',
-        'skills': ['Python', 'Django Framework', 'Django REST Framework', 'Flask', 'API Development', 'MySQL', 'PostgreSQL']
+        'skills': [
+            {'name': 'Python', 'icon': 'fab fa-python'},
+            {'name': 'Django Framework', 'icon': 'fas fa-server'},
+            {'name': 'Django REST Framework', 'icon': 'fas fa-plug'},
+            {'name': 'Flask', 'icon': 'fas fa-flask'},
+            {'name': 'API Development', 'icon': 'fas fa-code'},
+            {'name': 'MySQL', 'icon': 'fas fa-database'},
+            {'name': 'PostgreSQL', 'icon': 'fas fa-database'},
+        ]
     },
     'Database Management': {
         'icon': 'database',
-        'skills': ['PostgreSQL', 'MySQL', 'SQL Queries', 'Database Design', 'Django ORM', 'Data Migration']
+        'skills': [
+            {'name': 'PostgreSQL', 'icon': 'fas fa-database'},
+            {'name': 'MySQL', 'icon': 'fas fa-database'},
+            {'name': 'SQL Queries', 'icon': 'fas fa-search'},
+            {'name': 'Database Design', 'icon': 'fas fa-project-diagram'},
+            {'name': 'Django ORM', 'icon': 'fas fa-layer-group'},
+            {'name': 'Data Migration', 'icon': 'fas fa-exchange-alt'},
+        ]
     },
     'Development Tools': {
         'icon': 'tools',
-        'skills': ['Git Version Control', 'VS Code', 'Command Line', 'Debugging', 'Testing', 'Docker', 'Virtual Machines']
+        'skills': [
+            {'name': 'Git Version Control', 'icon': 'fab fa-git-alt'},
+            {'name': 'VS Code', 'icon': 'fas fa-code'},
+            {'name': 'Command Line', 'icon': 'fas fa-terminal'},
+            {'name': 'Debugging', 'icon': 'fas fa-bug'},
+            {'name': 'Testing', 'icon': 'fas fa-vial'},
+            {'name': 'Docker', 'icon': 'fab fa-docker'},
+            {'name': 'Virtual Machines', 'icon': 'fas fa-server'},
+        ]
     },
     'System Development': {
         'icon': 'cogs',
-        'skills': ['Inventory Management', 'Audit Systems', 'Financial Systems', 'User Management', 'Reporting Systems']
+        'skills': [
+            {'name': 'Inventory Management', 'icon': 'fas fa-boxes'},
+            {'name': 'Audit Systems', 'icon': 'fas fa-clipboard-check'},
+            {'name': 'Financial Systems', 'icon': 'fas fa-money-bill-wave'},
+            {'name': 'User Management', 'icon': 'fas fa-users'},
+            {'name': 'Reporting Systems', 'icon': 'fas fa-chart-bar'},
+        ]
     },
     'Additional Skills': {
         'icon': 'bolt',
-        'skills': ['Problem Solving', 'System Analysis', 'Requirements Gathering', 'Client Communication', 'Project Management']
+        'skills': [
+            {'name': 'Problem Solving', 'icon': 'fas fa-lightbulb'},
+            {'name': 'System Analysis', 'icon': 'fas fa-microscope'},
+            {'name': 'Requirements Gathering', 'icon': 'fas fa-tasks'},
+            {'name': 'Client Communication', 'icon': 'fas fa-comments'},
+            {'name': 'Project Management', 'icon': 'fas fa-project-diagram'},
+        ]
     }
 }
 
